@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="https://fontawesome.com/sessions/sign-in?next=%2Fkits">
+</head>
+<body>
+    
+    <section id="header">
+        <a href="#"><img src="img/logo.png" class="logo"></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="main.html" >Home</a></li>
+                <li><a href="shop.html">Shops</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        
+        <h2>#let's_talk</h2>
+        <p>Leave a message, we love to hear from you!</p>
+    </section>
+
+    <section id="contact-details" class="section-p1">
+        <div class="details">
+            <span>GET IN TOUCH</span>
+            <h2>Visit one of our agency location or contact us today</h2>
+            <h3>Head Office</h3>
+            <div>
+                <li>
+                    <i class="fa fa-map-marker"></i>
+                    <p>fate sager lake, Udaipur, Rajasthan </p>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <p>yog@gmail.com </p>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>contact@example.com </p>
+                </li>
+                <li>
+                    <i class="fas fa-clock"></i>
+                    <p>Monday to Sunday: 9:00 am to 9:00 pm </p>
+                </li>
+            </div>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58039.11277293635!2d73.66358655992768!3d24.60835860561605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e56550a14411%3A0xdbd8c28455b868b0!2sUdaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1701263243027!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen=""
+             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+    </section>
+
+    <section id="form-details">
+        <form id="contactForm">
+            <span>LEAVE A MESSAGE</span>
+            <h2>Contact Us</h2>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="text" id="email" placeholder="E-mail">
+            <input type="text" id="subject" placeholder="Subject">
+            <textarea id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <button class="normal">Submit</button>
+        </form>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1" >
+        <div class="newtext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>sutharo ka vas pawa pali</p>
+            <p><strong>Phone: </strong>8279102635</p>
+            <p><strong>House: </strong>10:00 Am to 6:00 Pm</p>
+            <div class="follow">
+                <h4>Follow</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions </a>
+            <a href="#">Contact us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track my Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col-install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Pay</p>
+            <div class="row">
+                <img src="img/pay/app.jpg">
+                <img src="img/pay/play.jpg">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png">
+        </div>
+        
+        <div class="copyright">
+            <p>© 2023, Yogesh Malviya</p>
+        </div>
+    </footer>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Wait for the DOM to be fully loaded before attaching event listeners
+
+  // Get the form element
+  var contactForm = document.getElementById("contactForm");
+
+  // Attach submit event listener to the form
+  contactForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form values
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    // Basic form validation
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Simulate form submission (you would typically send this data to a server)
+    // Here, we're just displaying a success message
+    var successMessage = "Thank you, " + name + "! Your message has been sent.";
+
+    // Display the success message using an alert
+    alert(successMessage);
+
+    // Clear the form fields
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+  });
+});
+</script>
+    <script src="https://kit.fontawesome.com/0421167b9d.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
